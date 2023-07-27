@@ -5,5 +5,5 @@ class NubbinBattery(Battery):
         self.current_date = current_date
 
     def needs_service(self):
-        time_difference = self.__current_date - self.__last_service_date
-        return (time_difference.days//365) >= 4
+        time_difference = self.current_date - self.last_service_date
+        return (time_difference.days/365.0) >= 4
